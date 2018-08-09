@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClapButtonView" customModule="MediumClapButton" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCancelClap" destination="QK5-6o-P50" id="VXS-gi-u8M"/>
+                <outlet property="btnClap" destination="ty1-oh-BO8" id="z0n-zk-jXu"/>
+                <outlet property="cancelBtnXConstraint" destination="Ugs-uh-al2" id="VNf-U0-PAG"/>
+                <outlet property="clapLblYConstraint" destination="Nbm-e5-Evv" id="pfd-yT-p8i"/>
+                <outlet property="lblClapCount" destination="Jzl-hA-xLD" id="B9E-jP-jwh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="MuF-Gx-r6H">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzl-hA-xLD">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.3803921569" green="0.78823529410000004" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QK5-6o-P50">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.84313725490000002" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnCancelClapAction:" destination="-1" eventType="touchUpInside" id="k63-Dz-tl2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ty1-oh-BO8">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="clap-hands"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnClapAction:" destination="-1" eventType="touchUpInside" id="yTV-g4-TL1"/>
+                        <action selector="btnClapTocuhDownAction:" destination="-1" eventType="touchDown" id="g7z-44-HhH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Jzl-hA-xLD" firstAttribute="height" secondItem="EO1-zA-tqB" secondAttribute="height" id="2RK-M3-khY"/>
+                <constraint firstItem="QK5-6o-P50" firstAttribute="bottom" secondItem="EO1-zA-tqB" secondAttribute="bottom" id="ExI-Pt-nBv"/>
+                <constraint firstItem="EO1-zA-tqB" firstAttribute="bottom" secondItem="ty1-oh-BO8" secondAttribute="bottom" id="H7B-WF-hql"/>
+                <constraint firstItem="Jzl-hA-xLD" firstAttribute="trailing" secondItem="EO1-zA-tqB" secondAttribute="trailing" id="LQS-4e-K0M"/>
+                <constraint firstItem="Jzl-hA-xLD" firstAttribute="centerY" secondItem="MuF-Gx-r6H" secondAttribute="centerY" id="Nbm-e5-Evv"/>
+                <constraint firstItem="QK5-6o-P50" firstAttribute="width" secondItem="EO1-zA-tqB" secondAttribute="width" id="SHJ-4X-qxC"/>
+                <constraint firstItem="ty1-oh-BO8" firstAttribute="top" secondItem="EO1-zA-tqB" secondAttribute="top" id="SUy-Td-UXV"/>
+                <constraint firstItem="QK5-6o-P50" firstAttribute="centerX" secondItem="MuF-Gx-r6H" secondAttribute="centerX" id="Ugs-uh-al2"/>
+                <constraint firstItem="QK5-6o-P50" firstAttribute="top" secondItem="EO1-zA-tqB" secondAttribute="top" id="kqq-tN-FWS"/>
+                <constraint firstItem="EO1-zA-tqB" firstAttribute="trailing" secondItem="ty1-oh-BO8" secondAttribute="trailing" id="lFJ-dS-ki3"/>
+                <constraint firstItem="ty1-oh-BO8" firstAttribute="leading" secondItem="EO1-zA-tqB" secondAttribute="leading" id="xsb-kK-chw"/>
+                <constraint firstItem="Jzl-hA-xLD" firstAttribute="leading" secondItem="EO1-zA-tqB" secondAttribute="leading" id="yOD-AG-Ifw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="EO1-zA-tqB"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-533" y="-262"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="clap-hands" width="32" height="32"/>
+    </resources>
+</document>
